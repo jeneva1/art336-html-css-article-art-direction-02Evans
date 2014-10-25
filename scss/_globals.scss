@@ -1,0 +1,67 @@
+/* 
+Globals
+	Sass variable, mixins, plugins, etc. that are used throughout the entore site.
+*/
+@function calculateRem($size) {
+$remSize: $size / 16px;
+@return #{$remSize}rem;
+}
+
+@mixin fontSize($size) {
+font-size: $size;
+font-size: calculateRem($size);
+}
+
+
+// Site variable
+$color: #fff;
+$background-color: #4c4c4c;
+$accent: #ae5a41;
+$accent-two: #c3cb71;
+$size: 16px;
+$bigsize: 32px;
+
+
+// Mixin that will include the fall back px declaration as well as the calculated rem value.
+
+@font-face {
+  font-family: 'Arvo';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Arvo Bold'), local('Arvo-Bold'), url(http://fonts.gstatic.com/s/arvo/v8/_OKjjqM9ed2qvTR07QdjWwLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(http://fonts.gstatic.com/s/opensans/v10/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(http://fonts.gstatic.com/s/opensans/v10/k3k702ZOKiLJc3WVjuplzKRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+}
+
+
+@mixin headline-font {
+  font-family: 'Arvo', Josefin Slab;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@mixin body-font-regular {
+  font-family: 'Open Sans', Roboto;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin body-font-bold {
+  font-family: 'Open Sans', Roboto;
+  font-style: normal;
+  font-weight: 700;
+}
+    
+    
+
+
